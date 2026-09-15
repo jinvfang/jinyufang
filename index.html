@@ -23,94 +23,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!--
-    - project detail modal styles (self-contained, does not touch style.css)
-  -->
-  <style>
-    .pm-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.75);
-      z-index: 9999;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .pm-overlay.active { display: flex; }
-
-    .pm-modal {
-      background: #1a1a2e;
-      width: 100%;
-      max-width: 600px;
-      max-height: 85vh;
-      overflow-y: auto;
-      border-radius: 14px;
-      position: relative;
-      font-family: 'Poppins', sans-serif;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-    }
-
-    .pm-close {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background: rgba(255, 255, 255, 0.1);
-      border: none;
-      color: #fff;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      font-size: 20px;
-      line-height: 1;
-      cursor: pointer;
-      z-index: 2;
-    }
-
-    .pm-close:hover { background: rgba(255, 255, 255, 0.2); }
-
-    .pm-image {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 14px 14px 0 0;
-      display: block;
-    }
-
-    .pm-body { padding: 22px 26px 30px; }
-
-    .pm-category {
-      color: #ffb100;
-      text-transform: uppercase;
-      font-size: 12px;
-      letter-spacing: 1px;
-      margin: 0 0 8px;
-      font-weight: 600;
-    }
-
-    .pm-title { color: #fff; font-size: 21px; margin: 0 0 4px; line-height: 1.3; }
-
-    .pm-date { color: #9b9bb4; font-size: 13px; margin: 0 0 18px; }
-
-    .pm-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
-
-    .pm-list li {
-      color: #d6d6e6;
-      font-size: 14.5px;
-      line-height: 1.55;
-      padding-left: 18px;
-      position: relative;
-    }
-
-    .pm-list li::before {
-      content: "▹";
-      position: absolute;
-      left: 0;
-      color: #ffb100;
-    }
-  </style>
 </head>
 
 <body>
@@ -130,14 +42,14 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/JF_best%20headshot.jpgg" alt="Jinyu Fang" width="80">
+          <img src="./assets/images/JF_bestheadshot.png" alt="Jinyu Fang" width="80">
         </figure>
 
         <div class="info-content">
           <h1 class="name" title="Jinyu Fang">Jinyu Fang</h1>
 
           <p class="title">Mechanical Engineering Student &amp; 
-                          Clean Energy Researcher</p>
+            Clean Energy Researcher</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -763,7 +675,7 @@
           <ul class="project-list">
 
             <li class="project-item  active" data-filter-item data-category="energy & sustainability">
-              <a href="#" data-project-id="battery">
+              <a href="project.html?id=battery">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -781,7 +693,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="energy & sustainability">
-              <a href="#" data-project-id="pv">
+              <a href="project.html?id=pv">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -799,7 +711,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="energy & sustainability">
-              <a href="#" data-project-id="sustainable-house">
+              <a href="project.html?id=sustainable-house">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -817,7 +729,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="design & fabrication">
-              <a href="#" data-project-id="truss">
+              <a href="project.html?id=truss">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -835,7 +747,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="design & fabrication">
-              <a href="#" data-project-id="color-sorter">
+              <a href="project.html?id=color-sorter">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -853,7 +765,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="design & fabrication">
-              <a href="#" data-project-id="temp-sensor">
+              <a href="project.html?id=temp-sensor">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -871,7 +783,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="testing & materials">
-              <a href="#" data-project-id="steel-concrete">
+              <a href="project.html?id=steel-concrete">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -889,7 +801,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="testing & materials">
-              <a href="#" data-project-id="c-channel">
+              <a href="project.html?id=c-channel">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -907,7 +819,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="testing & materials">
-              <a href="#" data-project-id="chem-capstone">
+              <a href="project.html?id=chem-capstone">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -979,22 +891,6 @@
 
     </div>
 
-    <!--
-      - project detail modal
-    -->
-    <div class="pm-overlay" id="pmOverlay">
-      <div class="pm-modal" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
-        <button class="pm-close" id="pmClose" aria-label="Close">&times;</button>
-        <img class="pm-image" id="pmImage" src="" alt="">
-        <div class="pm-body">
-          <p class="pm-category" id="pmCategory"></p>
-          <h3 class="pm-title" id="pmTitle"></h3>
-          <p class="pm-date" id="pmDate"></p>
-          <ul class="pm-list" id="pmList"></ul>
-        </div>
-      </div>
-    </div>
-
   </main>
 
 
@@ -1012,164 +908,6 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-  <!--
-    - project detail modal logic (self-contained; does not touch script.js)
-  -->
-  <script>
-    (function () {
-      var projects = {
-        "battery": {
-          title: "Low-Tortuosity Battery Electrode Research",
-          category: "Energy & Sustainability",
-          date: "BU Mesostructured Materials & Devices Lab · Jul 2026 — Present",
-          image: "./assets/images/project-1.jpg",
-          bullets: [
-            "Research-architected low-tortuosity electrodes using nonequilibrium soft-matter processing to enhance ion transport in high-energy-density batteries.",
-            "Engineered dual-scale porosity to reduce capacity loss during fast lithiation for EV battery applications.",
-            "Characterized interdigitated electrode architectures to optimize the balance between energy and power density.",
-            "Fabricated 3D carbon-sheet architectures for applications spanning carbon capture to high-energy-density storage."
-          ]
-        },
-        "pv": {
-          title: "Photovoltaic Technology Impact Evaluation",
-          category: "Energy & Sustainability",
-          date: "Student Energy Sustainability Analyst · Jan 2025 — May 2025",
-          image: "./assets/images/project-2.png",
-          bullets: [
-            "Assessed the crystal structure, bandgap, and commercial viability of leading photovoltaic materials, including monocrystalline silicon, Cadmium Telluride, and emerging perovskite solar cells.",
-            "Quantified the Levelized Cost of Electricity and life-cycle carbon footprint across photovoltaic system types.",
-            "Compared outputs from three large language models against peer-reviewed literature to validate technical claims on solar-cell performance and adoption trends."
-          ]
-        },
-        "sustainable-house": {
-          title: "Composting & Carbon Emissions Analysis",
-          category: "Energy & Sustainability",
-          date: "Sustainable House, Sydney · Jan 2026 — Jun 2026",
-          image: "./assets/images/project-3.jpg",
-          bullets: [
-            "Analyzed carbon-emissions and food-waste data in Excel to inform suburb-wide waste-reduction targets.",
-            "Managed and optimized aerobic composting units (\"Coolseats\") in the field.",
-            "Authored reports converting complex sustainability data into actionable insights for community and utility stakeholders.",
-            "Built composting infrastructure and led hands-on environmental education for a primary school class."
-          ]
-        },
-        "truss": {
-          title: "Optimized Acrylic Truss Design",
-          category: "Design & Fabrication",
-          date: "Student Mechanical Design Lead, EK301 · Feb 2025 — May 2025",
-          image: "./assets/images/project-4.png",
-          bullets: [
-            "Designed and built an 8-joint Warren truss out of acrylic, prioritizing load capacity to achieve a predicted failure load of 65 oz.",
-            "Developed a custom MATLAB program to calculate member axial forces and evaluate buckling thresholds.",
-            "Conducted uncertainty analysis across nominal, strong, and weak case scenarios to establish confidence intervals for structural failure limits."
-          ]
-        },
-        "color-sorter": {
-          title: "Automated Color Sorter",
-          category: "Design & Fabrication",
-          date: "Engineering Design Student · Jun 2026 — Aug 2026",
-          image: "./assets/images/project-5.png",
-          bullets: [
-            "Engineered a compact (2×2 ft) automated optical sorting device using microcontroller-based color-sensing algorithms across 5 color channels.",
-            "Designed a hands-free feeding and transparent multi-bin sorting system for clean handling.",
-            "Optimized electro-mechanical actuation and sensor integration to reliably sort 21 objects/min within a $200 budget."
-          ]
-        },
-        "temp-sensor": {
-          title: "Arduino Temperature Sensor Monitor",
-          category: "Design & Fabrication",
-          date: "Hands-On Engineering Student · Jan 2025 — May 2025",
-          image: "./assets/images/project-6.png",
-          bullets: [
-            "Designed and built a portable Arduino-based sensor (TMP36) with live temperature display.",
-            "Programmed the microcontroller to read the TMP36 sensor, display data on an LCD, and trigger visual/audio alerts upon exceeding a set range.",
-            "Documented the entire design process in a final technical report, highlighting key engineering decisions and performance outcomes."
-          ]
-        },
-        "steel-concrete": {
-          title: "Material Properties of Steel & Concrete",
-          category: "Testing & Materials",
-          date: "Student Materials Testing Engineer, CIVL2201 · May 2026",
-          image: "./assets/images/project-7.png",
-          bullets: [
-            "Conducted tension/compression tests on steel coupons and 35-day aged concrete cylinders per AS1391/AS1012.9 standards.",
-            "Operated a 300 kN Sintech testing machine and a 2000 kN DARTEC testing machine to acquire load-and-displacement data.",
-            "Calculated Young's Modulus, yield stress, ultimate strength, and ductility from stress-strain curves to characterize material failure behavior."
-          ]
-        },
-        "c-channel": {
-          title: "Steel C-Channel Beam Deflection Analysis",
-          category: "Testing & Materials",
-          date: "Student Structural Analyst, CIVL2201 · Mar 2026",
-          image: "./assets/images/project-8.jpg",
-          bullets: [
-            "Measured vertical deflection of a simply supported steel C-channel under asymmetric incremental loading up to 222.5 N using dial gauges.",
-            "Derived analytical deflection and bending moment expressions, validating experimental results within 10% of theoretical predictions."
-          ]
-        },
-        "chem-capstone": {
-          title: "General Chemistry Capstone: 12-Tungstosilicic Acid Synthesis",
-          category: "Testing & Materials",
-          date: "Capstone Researcher · Jan 2025 — May 2025",
-          image: "./assets/images/project-9.png",
-          bullets: [
-            "Designed an experiment using literature research to synthesize and characterize 12-tungstosilicic acid using UV-Vis/IR spectroscopy.",
-            "Assessed catalytic ineffectiveness in cyclohexanol dehydration via ¹H NMR, identifying impurities and proposing further optimization strategies such as solvent extraction.",
-            "Communicated findings through a formal research paper and a colloquium presentation to peers and faculty."
-          ]
-        }
-      };
-
-      var overlay = document.getElementById("pmOverlay");
-      var closeBtn = document.getElementById("pmClose");
-      var imgEl = document.getElementById("pmImage");
-      var catEl = document.getElementById("pmCategory");
-      var titleEl = document.getElementById("pmTitle");
-      var dateEl = document.getElementById("pmDate");
-      var listEl = document.getElementById("pmList");
-
-      function openModal(id) {
-        var p = projects[id];
-        if (!p || !overlay) return;
-        imgEl.src = p.image;
-        imgEl.alt = p.title;
-        catEl.textContent = p.category;
-        titleEl.textContent = p.title;
-        dateEl.textContent = p.date;
-        listEl.innerHTML = "";
-        p.bullets.forEach(function (b) {
-          var li = document.createElement("li");
-          li.textContent = b;
-          listEl.appendChild(li);
-        });
-        overlay.classList.add("active");
-        document.body.style.overflow = "hidden";
-      }
-
-      function closeModal() {
-        overlay.classList.remove("active");
-        document.body.style.overflow = "";
-      }
-
-      document.querySelectorAll(".project-item a[data-project-id]").forEach(function (link) {
-        link.addEventListener("click", function (e) {
-          e.preventDefault();
-          openModal(this.getAttribute("data-project-id"));
-        });
-      });
-
-      if (closeBtn) closeBtn.addEventListener("click", closeModal);
-      if (overlay) {
-        overlay.addEventListener("click", function (e) {
-          if (e.target === overlay) closeModal();
-        });
-      }
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape") closeModal();
-      });
-    })();
-  </script>
 
 </body>
 
