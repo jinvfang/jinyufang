@@ -1,18 +1,18 @@
-vCard - Personal Portfolio
+Personal Portfolio
 
 # sidebar
 
-alt = Richard hanrick
-Richard hanrick
-Web developer
+alt = Jinyu Fang
+Jinyu Fang
+Mechanical Engineering Student
 
 Show Contacts
 
 Email
-richard@example.com
+jinvfang@gmail.com
 
 Phone
-+1 (213) 352-2795
++1 (347)-654-4927
 
 Birthday
 June 23, 1982
