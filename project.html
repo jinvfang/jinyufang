@@ -3,50 +3,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Engineering project case study by Jinyu Fang.">
-  <title>Project | Jinyu Fang</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <meta name="robots" content="noindex">
+  <title>Opening project | Jinyu Fang</title>
   <link rel="icon" href="favicon.ico">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="project-body">
-  <header class="site-header project-header">
-    <nav class="nav shell" aria-label="Primary navigation">
-      <a class="brand" href="index.html#home"><span>JF</span> Jinyu Fang</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
-      <div class="nav-links" id="nav-links"><a href="index.html#home">Home</a><a href="index.html#about">About Me</a><a href="index.html#resume">Resume</a><a href="index.html#portfolio">Portfolio</a></div>
-    </nav>
-  </header>
-  <main class="project-main" id="project-root"></main>
-  <footer><div class="shell"><p>© 2026 Jinyu Fang</p><div><a href="mailto:jinyuf@bu.edu">Email</a><a href="https://linkedin.com/in/jinyu-fang" target="_blank" rel="noreferrer">LinkedIn</a></div></div></footer>
+  <main class="not-found">
+    <h1>Opening project…</h1>
+    <p>If the page does not open automatically, return to the project directory.</p>
+    <a class="button button-primary" href="index.html#portfolio">View all projects</a>
+  </main>
   <script>
-  const projects = {
-    battery:{title:'Low-Tortuosity Battery Electrode Research',category:'Energy & Sustainability',date:'Jul 2026 — Present',role:'Undergraduate Research Assistant',image:'assets/images/project-1.jpg',alt:'Battery electrode research imagery',summary:'Researching electrode architectures that shorten ion-transport pathways while retaining the porosity required for high-energy-density battery performance.',description:'At Boston University’s Mesostructured Materials & Devices Lab, I use nonequilibrium soft-matter processing to explore dual-scale porosity and interdigitated architectures for EV-relevant cells.',outcomes:['Engineered dual-scale porosity to reduce capacity loss during fast lithiation.','Characterized the tradeoff between energy density and power delivery.','Fabricated 3D carbon-sheet architectures with applications in energy storage and carbon capture.']},
-    pv:{title:'Photovoltaic Technology Impact Evaluation',category:'Energy & Sustainability',date:'Jan 2025 — May 2025',role:'Sustainability Analyst',image:'assets/images/project-2.png',alt:'Photovoltaic technology analysis',summary:'A comparative assessment of photovoltaic materials through the lenses of performance, economics, carbon impact, and commercial readiness.',description:'The study compared monocrystalline silicon, cadmium telluride, and emerging perovskite cells, connecting material structure and bandgap to system-level adoption.',outcomes:['Quantified levelized cost of electricity and life-cycle carbon footprint.','Validated model-generated technical claims against peer-reviewed literature.','Connected material properties to performance and commercialization constraints.']},
-    'sustainable-house':{title:'Composting & Carbon Emissions Analysis',category:'Energy & Sustainability',date:'Jan 2026 — Jun 2026',role:'Sustainability Analyst Intern',image:'assets/images/project-3.jpg',alt:'Community composting project',summary:'A community-scale sustainability project turning food-waste and carbon data into practical waste-reduction targets and public outreach.',description:'Working with Sustainable House in Sydney, I combined spreadsheet analysis, field operations, infrastructure work, and education to support neighborhood composting.',outcomes:['Analyzed emissions and food-waste data in Excel.','Managed and optimized aerobic composting units known as Coolseats.','Built composting infrastructure and led hands-on environmental education.']},
-    truss:{title:'Optimized Acrylic Truss Design',category:'Design & Fabrication',date:'Feb 2025 — May 2025',role:'Mechanical Design Lead',image:'assets/images/project-4.png',alt:'Acrylic Warren truss',summary:'An eight-joint acrylic Warren truss optimized for high load capacity, predictable failure behavior, and material-efficient fabrication.',description:'The design paired analytical structural mechanics with a custom MATLAB model and physical fabrication to predict performance before testing.',outcomes:['Reached a predicted failure load of 65 oz.','Calculated member axial forces and buckling thresholds in MATLAB.','Used nominal, strong, and weak cases to quantify uncertainty.']},
-    'electromechanical-design':{title:'Cartesian Motor System',category:'Design & Fabrication',date:'Sept 2026 — Present',role:'Electromechanical Designer',image:'assets/images/project-4.png',alt:'Cartesian electromechanical system',summary:'An in-progress Cartesian motion platform integrating mechanical design, actuation, and controls into a coordinated electromechanical system.',description:'The project focuses on translating positional requirements into a stable physical architecture, with iterative CAD, component selection, assembly, and testing.',outcomes:['Developed a modular Cartesian system architecture.','Integrated mechanical and electrical subsystems around motion requirements.','Established an iterative workflow for prototyping and validation.']},
-    'color-sorter':{title:'Automated Color Sorter',category:'Design & Fabrication',date:'Jun 2026 — Aug 2026',role:'Engineering Designer',image:'assets/images/project-5.png',alt:'Automated optical color sorter',summary:'A compact automated device that detects five color channels and mechanically sorts objects into transparent collection bins.',description:'The 2-by-2-foot system combines microcontroller-based sensing, hands-free feeding, and electromechanical actuation in a build constrained by cost and throughput.',outcomes:['Reliably sorted 21 objects per minute.','Designed a clean, hands-free feeding and multi-bin collection system.','Kept the complete prototype within a $200 budget.']},
-    'temp-sensor':{title:'Arduino Temperature Sensor Monitor',category:'Design & Fabrication',date:'Jan 2025 — May 2025',role:'Engineering Student',image:'assets/images/project-6.png',alt:'Arduino temperature monitoring system',summary:'A portable temperature monitor with live LCD feedback and visual and audio alerts when measurements leave a defined range.',description:'The project integrates a TMP36 sensor, Arduino microcontroller, display, and alerts into a documented working prototype.',outcomes:['Programmed real-time sensor acquisition and LCD output.','Implemented visual and audio threshold alerts.','Documented engineering decisions and performance in a final report.']},
-    'steel-concrete':{title:'Material Properties of Steel & Concrete',category:'Testing & Materials',date:'May 2026',role:'Materials Testing Engineer',image:'assets/images/project-7.png',alt:'Steel and concrete material testing',summary:'Laboratory characterization of steel and concrete under tension and compression using standardized test methods and full stress-strain analysis.',description:'Steel coupons and 35-day-aged concrete cylinders were tested with high-capacity universal testing equipment under AS1391 and AS1012.9.',outcomes:['Operated 300 kN Sintech and 2000 kN DARTEC test machines.','Calculated Young’s modulus, yield stress, ultimate strength, and ductility.','Interpreted stress-strain curves to characterize failure behavior.']},
-    'c-channel':{title:'Steel C-Channel Beam Deflection Analysis',category:'Testing & Materials',date:'Mar 2026',role:'Structural Analyst',image:'assets/images/project-8.jpg',alt:'Steel C-channel beam test',summary:'An experimental and analytical study of a simply supported steel C-channel subjected to asymmetric incremental loading.',description:'Dial-gauge measurements were compared with derived deflection and bending-moment expressions to test how closely theory predicted physical behavior.',outcomes:['Measured deflection under incremental loads up to 222.5 N.','Derived analytical deflection and bending-moment expressions.','Validated experimental results within 10% of theoretical predictions.']},
-    'chem-capstone':{title:'12-Tungstosilicic Acid Synthesis',category:'Testing & Materials',date:'Jan 2025 — May 2025',role:'Capstone Researcher',image:'assets/images/project-9.png',alt:'Chemistry capstone analysis',summary:'A chemistry capstone investigating the synthesis, characterization, and catalytic behavior of 12-tungstosilicic acid.',description:'Literature-guided synthesis was paired with UV-Vis, infrared spectroscopy, and proton NMR to evaluate product identity and catalytic performance.',outcomes:['Designed a literature-informed synthesis and characterization workflow.','Used spectroscopy to identify impurities and explain catalytic ineffectiveness.','Proposed solvent extraction and further optimization pathways.']}
-  };
-  const root=document.getElementById('project-root');
-  const project=projects[new URLSearchParams(location.search).get('id')];
-  const escapeHTML=(value)=>{const el=document.createElement('div');el.textContent=value;return el.innerHTML};
-  if(!project){root.innerHTML='<section class="not-found"><h1>Project not found</h1><p>This case study does not exist.</p><a class="button button-primary" href="index.html#portfolio">Back to all projects</a></section>'}
-  else{
-    document.title=project.title+' | Jinyu Fang';
-    root.innerHTML=`<article><header class="project-hero shell"><a class="back-link" href="index.html#portfolio">← All projects</a><p class="eyebrow">${escapeHTML(project.category)}</p><h1>${escapeHTML(project.title)}</h1><div class="project-meta"><span>${escapeHTML(project.role)}</span><span>${escapeHTML(project.date)}</span></div></header><section class="project-gallery shell" aria-label="Project photos"><img src="${project.image}" alt="${escapeHTML(project.alt)}"></section><section class="case-grid shell"><div><p class="eyebrow">Project overview</p><h2>From question to tested outcome.</h2></div><div class="case-copy"><p class="summary">${escapeHTML(project.summary)}</p><p>${escapeHTML(project.description)}</p><div class="outcomes"><h3>Key work &amp; outcomes</h3><ul>${project.outcomes.map(item=>`<li>${escapeHTML(item)}</li>`).join('')}</ul></div></div></section><section class="project-end shell"><div><p>Continue exploring</p><h2>See the complete project collection.</h2></div><a class="button" href="index.html#portfolio">Back to portfolio <span aria-hidden="true">↗</span></a></section></article>`;
-  }
+    // Compatibility redirect for old project.html?id=... links.
+    const pages = {
+      battery: 'battery-electrodes.html',
+      pv: 'photovoltaic-evaluation.html',
+      'sustainable-house': 'composting-carbon.html',
+      truss: 'acrylic-truss.html',
+      'electromechanical-design': 'cartesian-motor.html',
+      'color-sorter': 'color-sorter.html',
+      'temp-sensor': 'temperature-monitor.html',
+      'steel-concrete': 'steel-concrete.html',
+      'c-channel': 'c-channel.html',
+      'chem-capstone': 'chemistry-capstone.html'
+    };
+    const page = pages[new URLSearchParams(window.location.search).get('id')];
+    if (page) window.location.replace('projects/' + page);
   </script>
-  <script src="assets/js/script.js"></script>
 </body>
 </html>
