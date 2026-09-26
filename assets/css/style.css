@@ -128,3 +128,5 @@ footer{background:#080d0c;border-color:var(--line)}
 .lightbox button{position:absolute;border:0;background:rgba(255,255,255,.12);color:#fff;font-size:30px;line-height:1;width:48px;height:48px;border-radius:50%;cursor:pointer}.lightbox button:hover,.lightbox button:focus-visible{background:rgba(255,255,255,.25)}.lightbox-close{top:14px;right:14px}.lightbox-nav{top:50%;transform:translateY(-50%)}.lightbox-nav.prev{left:14px}.lightbox-nav.next{right:14px}
 @media(max-width:600px){.lightbox{padding:64px 12px 24px}.lightbox-nav{top:auto;bottom:14px;transform:none}.lightbox img{max-height:calc(100vh - 190px)}}
 .outcomes a{color:var(--clay);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+/* Data tables inside project sections. */
+.table-wrap{overflow-x:auto;margin-top:28px}.data-table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.45}.data-table th,.data-table td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}.data-table th{color:var(--muted);font-weight:700;font-size:13px;letter-spacing:.02em}.data-table td:first-child{font-weight:700}
