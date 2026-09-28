@@ -130,3 +130,6 @@ footer{background:#080d0c;border-color:var(--line)}
 .outcomes a{color:var(--clay);font-weight:700;text-decoration:underline;text-underline-offset:3px}
 /* Data tables inside project sections. */
 .table-wrap{overflow-x:auto;margin-top:28px}.data-table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.45}.data-table th,.data-table td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}.data-table th{color:var(--muted);font-weight:700;font-size:13px;letter-spacing:.02em}.data-table td:first-child{font-weight:700}
+
+/* Resume skill groups */
+.skill-group{margin-top:22px}.skill-group .eyebrow{margin-bottom:10px}.skill-group .skill-list{margin:0}
