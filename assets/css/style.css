@@ -134,3 +134,4 @@ footer{background:#080d0c;border-color:var(--line)}
 /* Resume skill groups */
 .skill-group{margin-top:22px}.skill-group .eyebrow{margin-bottom:10px}.skill-group .skill-list{margin:0}
 .inline-link{color:var(--lime);text-decoration:underline;text-underline-offset:3px}
+.timeline-item>p:has(+.entry-link){color:var(--muted);margin-bottom:8px}.entry-link{margin:0 0 0 16px;font-size:14px;font-weight:700}
