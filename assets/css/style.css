@@ -133,5 +133,3 @@ footer{background:#080d0c;border-color:var(--line)}
 
 /* Resume skill groups */
 .skill-group{margin-top:22px}.skill-group .eyebrow{margin-bottom:10px}.skill-group .skill-list{margin:0}
-/* Certification cards in the resume column. */
-.cert-card{display:flex;gap:20px;align-items:flex-start}.cert-card img{flex:none;width:84px;height:84px;padding:4px;background:#fff;border-radius:4px}.cert-card div>p:not(.date):not(.org):not(.cert-issued){color:var(--muted)}.cert-card .org{margin:3px 0 10px;font-weight:600}.cert-card .skill-list{margin:14px 0 0}.cert-card .cert-issued{margin:0 0 10px;color:var(--green);font-size:13px;font-weight:700}@media (max-width:520px){.cert-card{flex-direction:column}}
