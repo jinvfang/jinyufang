@@ -135,3 +135,6 @@ footer{background:#080d0c;border-color:var(--line)}
 .skill-group{margin-top:22px}.skill-group .eyebrow{margin-bottom:10px}.skill-group .skill-list{margin:0}
 .inline-link{color:var(--lime);text-decoration:underline;text-underline-offset:3px}
 .timeline-item>p:has(+.entry-link){color:var(--muted);margin-bottom:8px}.entry-link{margin:0 0 0 16px;font-size:14px;font-weight:700}
+/* Code listings on project pages. */
+.code-block{margin:22px 0 0;padding:18px 20px;overflow-x:auto;background:#0b1110;border:1px solid var(--line);border-radius:6px;color:#e8efed;font:13px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre}.code-block code{font:inherit}
+.case-grid[id]{scroll-margin-top:90px}
