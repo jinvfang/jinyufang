@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A joystick-controlled 2.5-degree-of-freedom gantry that plays a carnival fishing game with an electromagnet and a rotating plate of fish, designed and built by Jinyu Fang.">
+  <meta name="description" content="A joystick-controlled 2.5-degree-of-freedom gantry that plays a carnival fishing game with an electromagnet and a rotating plate of fish. ME 360 Electromechanical Design team project at Boston University.">
   <title>2.5 DoF Carnival Fishing | Jinyu Fang</title>
   <link rel="icon" href="../favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/css/style.css">
@@ -23,34 +23,49 @@
       <a class="back-link" href="../index.html#portfolio">← All projects</a>
       <p class="eyebrow">Design &amp; Fabrication</p>
       <h1>2.5 DoF Carnival Fishing</h1>
-      <div class="project-meta"><span>Electromechanical Designer</span><span>Electromechanical Design, Boston University</span><span>Sep 2026 — Oct 2026</span></div>
+      <div class="project-meta"><span>Electromechanical Designer</span><span>Electromechanical Design, Boston University · Group 7 team project</span><span>Sep 2026 — Oct 2026</span></div>
     </header>
 
     <!-- The first image is the large hero image. -->
     <section class="project-gallery shell" aria-label="Project photos">
-      <img src="../assets/images/carnival-fishing-final-assembly.jpg" alt="The finished carnival fishing gantry: red 3D-printed carriages on aluminum rails above a blue rotating plate of red fish, wired to an MKS Base control board">
+      <img src="../assets/images/cf-overview.jpg" alt="The finished carnival fishing machine: a red and aluminum gantry on 80/20 legs over a blue rotating plate of red fish, with the handheld joystick and the black ME 360 Group 7 electronics box in front">
     </section>
 
     <!-- EDIT PROJECT DESCRIPTION AND OUTCOMES -->
     <section class="case-grid shell">
       <div><p class="eyebrow">Project overview</p><h2>A Joystick-Controlled Carnival Fishing Game.</h2></div>
       <div class="case-copy">
-        <p class="summary">I designed and built a 2.5-degree-of-freedom gantry that turns the carnival fishing game into a machine: the player steers an electromagnet over a spinning plate of fish with a joystick, then dips it down to catch one.</p>
-        <p>The gantry moves freely in X and Y, which gives two full degrees of freedom. The third axis, Z, only has two positions, up and down: one press of the joystick lowers the magnet 10 mm, pauses, and lifts it back up. That limited vertical motion is the “half” degree of freedom. A fifth stepper motor spins the plate of fish underneath to make the game harder, and everything runs from one joystick and one control board.</p>
-        <p>This page follows the project in order: <a class="inline-link" href="#how-it-plays">how it plays</a>, <a class="inline-link" href="#first-stage">the first linear stage</a>, <a class="inline-link" href="#cad">the CAD model</a>, <a class="inline-link" href="#manufacturing">manufacturing</a>, <a class="inline-link" href="#code">electronics and code</a>, and <a class="inline-link" href="#final">the final assembly</a>.</p>
+        <p class="summary">Our team built a 2.5-degree-of-freedom gantry that turns the carnival fishing game into a machine: the player steers an electromagnet over a spinning plate of fish with a joystick, dips it to pick a fish up, and drops it in the bucket.</p>
+        <p>The gantry moves freely in X and Y, which gives two full degrees of freedom. The third axis, Z, only has two positions, up and down: one press of the joystick lowers the magnet, pauses, and lifts it back up. That limited vertical motion is the “half” degree of freedom. A fifth stepper motor spins the plate underneath to make the game harder, and everything runs from one handheld joystick and one control board.</p>
+        <p>This page follows the project in order: <a class="inline-link" href="#brief">the brief</a>, <a class="inline-link" href="#how-it-plays">how it plays</a>, <a class="inline-link" href="#first-stage">the first linear stage</a>, <a class="inline-link" href="#cad">the CAD models</a>, <a class="inline-link" href="#parts">each part as built</a>, <a class="inline-link" href="#manufacturing">manufacturing</a>, <a class="inline-link" href="#code">electronics and code</a>, and <a class="inline-link" href="#final">the final assembly</a>.</p>
         <div class="outcomes"><h3>Key Work &amp; Outcomes</h3><ul>
           <li>Built a belt-driven gantry on 80/20 aluminum extrusion with X–Y travel of up to 50 mm/s and a 10 mm Z dip.</li>
-          <li>Drove five stepper motors (two for X, plus Y, Z, and the plate) and an electromagnet from one MKS Base board.</li>
-          <li>Wrote Arduino firmware that maps a single joystick to movement, the Z dip, the magnet, and a three-round game.</li>
-          <li>Modeled the full machine in SolidWorks, with equation-driven motor mounts sized from the NEMA 17 dimensions.</li>
+          <li>Designed a purpose-built end effector: a printed holder that carries an electromagnet, plus 3D-printed fish with steel screws for it to grab.</li>
+          <li>Drove five stepper motors (two for X, plus Y, Z, and the plate) and the electromagnet from one MKS Base board.</li>
+          <li>Wrote Arduino firmware over seven versions that maps one joystick to movement, the Z dip, the magnet, and a three-round game.</li>
+          <li>Modeled every printed part in SolidWorks, with equation-driven motor mounts sized from the NEMA 17 dimensions.</li>
         </ul></div>
+      </div>
+    </section>
+
+    <section class="case-grid shell" id="brief" aria-label="Design brief">
+      <div><p class="eyebrow">The brief</p><h2>A Portable Motion System With A Purpose</h2></div>
+      <div class="case-copy">
+        <p class="summary">In six weeks, each team had to design, build, and integrate a Cartesian motion system that performs a task of its choice.</p>
+        <div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">Requirement</th><th scope="col">How it shaped our design</th></tr></thead><tbody>
+          <tr><td>End effector work area of at least 2.5 in × 2.5 in</td><td>The gantry spans the whole fish plate, so the magnet can reach every pocket</td></tr>
+          <tr><td>Small and light enough to carry in a backpack; assembled by one person in 10 minutes</td><td>A frame of stock 80/20 lengths joined by printed blocks and screws</td></tr>
+          <tr><td>Provided extrusion, stepper motors, belts, and pulleys</td><td>The extrusion doubles as the frame and the linear guide for each axis</td></tr>
+          <tr><td>All other parts 3D printed or laser cut, joined with standard fasteners (no tape or glue)</td><td>Every custom part was 3D printed and fastened with screws</td></tr>
+          <tr><td>Extra credit for an original, purpose-built end effector</td><td>An electromagnet holder that picks up fish carrying steel screws</td></tr>
+        </tbody></table></div>
       </div>
     </section>
 
     <section class="case-grid shell" id="how-it-plays" aria-label="How it plays">
       <div><p class="eyebrow">How it plays</p><h2>One Joystick, Four Actions</h2></div>
       <div class="case-copy">
-        <p class="summary">Each fish carries a steel screw. The player lines the magnet up over a fish, switches the magnet on, and dips to pick it up.</p>
+        <p class="summary">The player lines the magnet up over a fish, switches the magnet on, dips to pick the fish up, and carries it to the bucket.</p>
         <p>Pushing the stick further moves the gantry faster, so small corrections are easy and long moves are quick. While the magnet is dipping, X and Y are locked so the player can’t drag the magnet sideways through the fish.</p>
         <div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">Joystick input</th><th scope="col">What the machine does</th></tr></thead><tbody>
           <tr><td>Push the stick</td><td>Moves the magnet in X and Y; speed follows how far the stick is pushed</td></tr>
@@ -70,49 +85,93 @@
     <section class="case-grid shell" id="first-stage" aria-label="First linear stage">
       <div><p class="eyebrow">First linear stage</p><h2>Starting With One Axis</h2></div>
       <div class="case-copy">
-        <p class="summary">Before building the full gantry, I built and tested a single linear stage.</p>
-        <p>The first stage used a NEMA 17 stepper turning a lead screw through a flexible coupler. A brass nut drove a foam-board carriage along the screw, with a pillow-block bearing supporting the far end. Two of these stages became the <a class="inline-link" href="cartesian-motor.html">in-class plotter</a>, which drew shapes from G-code.</p>
-        <p>For the fishing game, I kept the NEMA 17 motors and the MKS Base board but switched to timing belts running on 80/20 aluminum extrusion. Belts move the carriage much faster than a lead screw, which a game needs, and the extrusion serves as both the frame and the rail.</p>
+        <p class="summary">Before designing the gantry, we built and tested a single linear stage.</p>
+        <p>The first stage used a NEMA 17 stepper turning a lead screw through a flexible coupler. A brass nut drove a foam-board carriage along the screw, with a pillow-block bearing supporting the far end. We drove it with G-code through Marlin firmware, configured at 400 steps/mm for the 8 mm-per-turn lead screw, then stacked two stages into the <a class="inline-link" href="cartesian-motor.html">in-class plotter</a>.</p>
+        <p>For the fishing game, we kept the NEMA 17 motors and the MKS Base board but switched to timing belts running on 80/20 aluminum extrusion. Belts move a carriage much faster than a lead screw, which a game needs, and the extrusion serves as both the frame and the rail.</p>
         <div class="evidence-grid">
-          <figure class="evidence-item"><img src="../assets/images/prototype motor.jpeg" alt="First linear stage: a NEMA 17 stepper driving a lead screw through a flexible coupler, moving a foam-board carriage"><figcaption>First linear stage: stepper, coupler, lead screw, and carriage</figcaption></figure>
+          <figure class="evidence-item"><img src="../assets/images/prototype motor.jpeg" alt="First linear stage: a NEMA 17 stepper driving a lead screw through a flexible coupler, moving a foam-board carriage"><figcaption>First linear stage: stepper, coupler, lead screw, brass nut carriage, and end bearing</figcaption></figure>
+          <figure class="evidence-item"><video controls preload="metadata" src="../assets/videos/first-linear-stage.mp4"></video><figcaption>First test: the stepper drives the carriage along the lead screw</figcaption></figure>
           <figure class="evidence-item"><video controls preload="metadata" src="../assets/videos/squarebox.mp4"></video><figcaption>Two stages combined into a plotter, drawing a square from G-code</figcaption></figure>
         </div>
       </div>
     </section>
 
-    <section class="case-grid shell" id="cad" aria-label="CAD model">
-      <div><p class="eyebrow">CAD model</p><h2>Designed In SolidWorks</h2></div>
+    <section class="case-grid shell" id="cad" aria-label="CAD models">
+      <div><p class="eyebrow">CAD models</p><h2>Designed In SolidWorks</h2></div>
       <div class="case-copy">
-        <p class="summary">The whole machine was modeled as one SolidWorks assembly before anything was printed or cut.</p>
-        <p>I imported vendor models of the NEMA 17 motors, timing pulleys, MKS Base board, and joystick module to check fit and clearances. The motor mounts are driven by global equations (a 1.7 in motor face, 1.2205 in between mounting holes, a 5 mm shaft, and the 1 in extrusion size), so changing one number updates every mount.</p>
+        <p class="summary">The whole machine was modeled as one SolidWorks assembly, built up from subassemblies for each axis, the plate, and the controls.</p>
+        <p>We imported vendor models of the NEMA 17 motors, timing pulleys, MKS Base board, and joystick module to check fit and clearances. The motor mounts are driven by global equations (a 1.7 in motor face, 1.2205 in between mounting holes, a 5 mm shaft, and the 1 in extrusion size), so changing one number updates every mount.</p>
         <div class="evidence-grid">
-          <figure class="evidence-item fit"><img src="../assets/images/carnival-fishing-cad.png" alt="SolidWorks render of the gantry: red carriages on aluminum rails, a green Z motor holder, the blue plate with red fish, the control board, and the joystick"><figcaption>Full SolidWorks assembly: gantry, Z motor holder, fish plate, control board, and joystick</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/carnival-fishing-cad.png" alt="SolidWorks render of the full machine: red carriages on aluminum rails, a green Z motor holder, the blue plate with red fish, the control board, and the joystick"><figcaption>Full assembly: gantry, Z motor holder, fish plate, control board, and joystick</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/cad-x-rail.png" alt="CAD render of the X rail subassembly"><figcaption>X rail subassembly: 80/20 rail with a motor holder at one end and an idler block at the other</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/cad-y-rail.png" alt="CAD render of the Y rail subassembly"><figcaption>Y rail subassembly: the crossbar the Z carriage rides along</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/cad-plate-assembly.png" alt="CAD render of the rotating plate assembly"><figcaption>Plate assembly: rotating plate seated in its foundation</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/cad-electronics-box.png" alt="CAD render of the electronics box engraved ME 360 Group 7"><figcaption>Electronics box assembly, engraved “ME 360 Group 7”</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/cad-joystick.png" alt="CAD render of the handheld joystick controller"><figcaption>Handheld joystick controller assembly</figcaption></figure>
         </div>
-        <div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">Subassembly or part</th><th scope="col">What it does</th></tr></thead><tbody>
-          <tr><td>X rail subassembly</td><td>Two parallel 80/20 rails, each with its own stepper, carry the gantry front to back</td></tr>
-          <tr><td>Y rail subassembly</td><td>The crossbar the Z carriage rides along, side to side</td></tr>
-          <tr><td>Z motor holder and slider</td><td>Carries the Z motor that dips the magnet</td></tr>
-          <tr><td>Electromagnet holder</td><td>Holds the magnet at the bottom of the Z axis</td></tr>
-          <tr><td>Rotating plate assembly</td><td>A base and a stepper-driven turntable with pockets for the fish</td></tr>
-          <tr><td>Fish</td><td>Game pieces that sit in the plate pockets</td></tr>
-          <tr><td>Motor holders and pulleys</td><td>Mount the NEMA 17 motors to the extrusion and route the timing belts</td></tr>
-          <tr><td>Electronics box and joystick housing</td><td>Enclosures for the MKS Base board and the joystick module</td></tr>
+      </div>
+    </section>
+
+    <section class="case-grid shell" id="parts" aria-label="Parts">
+      <div><p class="eyebrow">Part by part</p><h2>Every Printed Part, In CAD And As Built</h2></div>
+      <div class="case-copy">
+        <p class="summary">Each custom part was designed around the 1 in extrusion, the NEMA 17 motors, or the game itself.</p>
+        <div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">Part</th><th scope="col">What it does</th></tr></thead><tbody>
+          <tr><td>Motor holder</td><td>Clamps a NEMA 17 under the end of an X rail; the pulley on top drives that rail’s belt</td></tr>
+          <tr><td>Rail end block</td><td>Closes the other end of each rail and carries the idler pulley the belt wraps around</td></tr>
+          <tr><td>X carriage</td><td>Slides along an X rail on the extrusion and holds one end of the Y rail</td></tr>
+          <tr><td>8020 holder</td><td>Joins lengths of extrusion where the frame meets</td></tr>
+          <tr><td>Z motor holder</td><td>Rides along the Y rail and carries the Z motor that raises and lowers the magnet</td></tr>
+          <tr><td>Electromagnet holder</td><td>The end effector: holds the electromagnet at the bottom of the Z axis</td></tr>
+          <tr><td>Rotating plate and foundation</td><td>A turntable with 14 fish pockets, driven from below by the plate stepper, sitting in a base</td></tr>
+          <tr><td>Fish</td><td>Game pieces, each with a steel screw for the magnet to pick up</td></tr>
+          <tr><td>Electronics box (top and bottom)</td><td>Encloses the MKS Base board, with slots for wiring</td></tr>
+          <tr><td>Joystick housing (top and bottom)</td><td>A handheld shell around the joystick module</td></tr>
         </tbody></table></div>
+        <div class="evidence-grid">
+          <figure class="evidence-item fit"><img src="../assets/images/cad-motor-holder.png" alt="CAD render of the red motor holder"><figcaption>Motor holder (CAD)</figcaption></figure>
+          <figure class="evidence-item"><img src="../assets/images/cf-x-motor.jpg" alt="Printed motor holder with a NEMA 17 underneath and a pulley on top, at the end of an X rail"><figcaption>Motor holder (built), with the pulley driving the X belt</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/cad-rail-end-block.png" alt="CAD render of the rail end block"><figcaption>Rail end block (CAD)</figcaption></figure>
+          <figure class="evidence-item"><img src="../assets/images/cf-rail-end.jpg" alt="Printed rail end blocks with idler pulleys at the corners of the frame, beside the red catch bucket"><figcaption>Rail end blocks and idlers (built), next to the catch bucket</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/cad-x-carriage.png" alt="CAD render of the X carriage"><figcaption>X carriage (CAD)</figcaption></figure>
+          <figure class="evidence-item"><img src="../assets/images/cf-x-carriage.jpg" alt="Printed X carriage on the rail with the belt clamped to it"><figcaption>X carriage (built), with the belt clamped on</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/cad-8020-holder.png" alt="CAD render of the 8020 holder"><figcaption>8020 holder (CAD)</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/cad-z-motor-holder.png" alt="CAD render of the green Z motor holder"><figcaption>Z motor holder (CAD)</figcaption></figure>
+          <figure class="evidence-item"><img src="../assets/images/cf-z-holder.jpg" alt="Green printed Z motor holder carrying a NEMA 17 on the Y rail"><figcaption>Z motor holder (built), riding on the Y rail</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/cad-electromagnet-holder.png" alt="CAD render of the electromagnet holder"><figcaption>Electromagnet holder (CAD)</figcaption></figure>
+          <figure class="evidence-item"><img src="../assets/images/cf-magnet-fish.jpg" alt="Electromagnet hanging just above the fish on the plate"><figcaption>Electromagnet (built), lowered over the fish</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/cad-rotating-plate.png" alt="CAD render of the rotating plate with fish pockets"><figcaption>Rotating plate (CAD)</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/cad-plate-foundation.png" alt="CAD render of the plate foundation"><figcaption>Plate foundation (CAD)</figcaption></figure>
+          <figure class="evidence-item"><img src="../assets/images/cf-plate-motor.jpg" alt="Underside of the plate base showing the stepper motor that turns the plate"><figcaption>Underside of the base (built): the stepper that turns the plate</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/cad-fish.png" alt="CAD render of a fish game piece"><figcaption>Fish (CAD)</figcaption></figure>
+          <figure class="evidence-item"><img src="../assets/images/cf-fish.jpg" alt="Printed red fish with a steel screw in its top"><figcaption>Fish (built), with its steel screw</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/cad-box-top.png" alt="CAD render of the electronics box lid"><figcaption>Electronics box top (CAD)</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/cad-box-bottom.png" alt="CAD render of the electronics box base"><figcaption>Electronics box bottom (CAD)</figcaption></figure>
+          <figure class="evidence-item"><img src="../assets/images/cf-electronics-box.jpg" alt="Black printed electronics box engraved ME 360 Group 7 with fish"><figcaption>Electronics box (built)</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/cad-joy-top.png" alt="CAD render of the joystick housing top"><figcaption>Joystick housing top (CAD)</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/cad-joy-bottom.png" alt="CAD render of the joystick housing bottom"><figcaption>Joystick housing bottom (CAD)</figcaption></figure>
+          <figure class="evidence-item"><img src="../assets/images/cf-joystick.jpg" alt="Black printed handheld joystick controller"><figcaption>Joystick controller (built)</figcaption></figure>
+        </div>
       </div>
     </section>
 
     <section class="case-grid shell" id="manufacturing" aria-label="Manufacturing">
       <div><p class="eyebrow">Manufacturing</p><h2>Printed Parts On Aluminum Rails</h2></div>
       <div class="case-copy">
-        <p class="summary">Custom parts were 3D printed; the structure uses stock 80/20 extrusion, timing belts, and off-the-shelf pulleys.</p>
+        <p class="summary">Custom parts were 3D printed; the structure uses stock 80/20 extrusion, timing belts, and off-the-shelf pulleys, all joined with screws.</p>
         <div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">Component</th><th scope="col">How it was made</th></tr></thead><tbody>
-          <tr><td>Carriages, motor holders, and idler mounts</td><td>3D printed</td></tr>
+          <tr><td>Motor holders, rail end blocks, carriages, 8020 holders</td><td>3D printed</td></tr>
           <tr><td>Z motor holder and electromagnet holder</td><td>3D printed</td></tr>
-          <tr><td>Rotating plate, base, and fish</td><td>3D printed; a steel screw in each fish for the magnet to grab</td></tr>
-          <tr><td>Frame and rails</td><td>1 in 80/20 aluminum extrusion, cut to 11.5 in and 15 in lengths</td></tr>
+          <tr><td>Rotating plate, foundation, fish, and catch bucket</td><td>3D printed; a steel screw in each fish for the magnet</td></tr>
+          <tr><td>Electronics box and joystick housing</td><td>3D printed</td></tr>
+          <tr><td>Frame, legs, and rails</td><td>1 in 80/20 aluminum extrusion, cut to length (11.5 in and 15 in rails)</td></tr>
           <tr><td>Drive</td><td>NEMA 17 steppers, GT timing belts, aluminum timing pulleys, and idler pulleys</td></tr>
           <tr><td>Electronics</td><td>MKS Base v1.5 board, analog joystick module, and electromagnet</td></tr>
         </tbody></table></div>
+        <div class="evidence-grid">
+          <figure class="evidence-item"><img src="../assets/images/carnival-fishing-final-assembly.jpg" alt="The gantry mid-build on a workbench, wired to the control board"><figcaption>Mid-build: first full fit-up of the printed parts, rails, and wiring</figcaption></figure>
+          <figure class="evidence-item"><img src="../assets/images/cf-z-carriage.jpg" alt="Z carriage on the Y rail with the electromagnet hanging below"><figcaption>Z carriage on the Y rail, with the magnet hanging below</figcaption></figure>
+        </div>
       </div>
     </section>
 
@@ -128,7 +187,20 @@
           <tr><td>Plate motor</td><td>E1 driver slot</td></tr>
           <tr><td>Electromagnet</td><td>E0 heater MOSFET output (pin D10), with a flyback diode across the coil</td></tr>
         </tbody></table></div>
-        <p>How the firmware works:</p>
+        <div class="evidence-grid">
+          <figure class="evidence-item"><img src="../assets/images/cf-electronics-wiring.jpg" alt="Electronics box with the joystick cable and motor wiring running to the gantry"><figcaption>The electronics box wired to the joystick and the motors</figcaption></figure>
+        </div>
+        <p>We first planned to run the gantry on GRBL with G-code jog commands streamed from a laptop script that read the joystick. We switched to our own Arduino firmware so the joystick plugs straight into the board and no computer is needed during play. The firmware grew one feature at a time:</p>
+        <div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">Version</th><th scope="col">Date</th><th scope="col">What it added</th></tr></thead><tbody>
+          <tr><td>Prototype G-code</td><td>Sep 30</td><td>GRBL jog commands and a bench test that simulates a player</td></tr>
+          <tr><td>joystick_gantry</td><td>Oct 5</td><td>Proportional X–Y control from the stick; a single press dips Z</td></tr>
+          <tr><td>+ button</td><td>Oct 19</td><td>Double press toggles the electromagnet</td></tr>
+          <tr><td>+ rotating</td><td>Oct 19</td><td>Long hold spins the plate</td></tr>
+          <tr><td>+ timer</td><td>Oct 20</td><td>The plate stops by itself after one minute</td></tr>
+          <tr><td>+ round 2</td><td>Oct 20</td><td>A faster second round, then a pause and a reversed direction</td></tr>
+          <tr><td>joystick_gantry_final</td><td>Oct 20</td><td>Round 3 with random parts, speeds, and direction changes</td></tr>
+        </tbody></table></div>
+        <p>How the final firmware works:</p>
         <div class="outcomes"><ul>
           <li><strong>Proportional speed.</strong> The stick is calibrated at power-on, ignores small movements near center (a dead zone), and scales speed up to 4,000 steps/s, which is 50 mm/s at 80 steps/mm.</li>
           <li><strong>Smooth acceleration.</strong> Speed ramps at 8,000 steps/s² so sudden stick moves don’t stall the motors.</li>
@@ -161,9 +233,10 @@ float ramp(float current, float target, float dt) {
     <section class="case-grid shell" id="final" aria-label="Final assembly">
       <div><p class="eyebrow">Final assembly</p><h2>The Finished Machine</h2></div>
       <div class="case-copy">
-        <p class="summary">The finished gantry is wired to the control board, with the fish plate underneath.</p>
+        <p class="summary">The finished gantry stands on 80/20 legs over the fish plate, with the catch bucket beside it and the controls on a cable in front.</p>
         <div class="evidence-grid">
-          <figure class="evidence-item"><img src="../assets/images/carnival-fishing-final-assembly.jpg" alt="Final assembly of the carnival fishing gantry on a workbench"><figcaption>Final assembly: printed carriages on 80/20 rails above the fish plate</figcaption></figure>
+          <figure class="evidence-item"><img src="../assets/images/cf-front.jpg" alt="Front view of the finished machine with the fish plate and catch bucket under the gantry"><figcaption>Front view: gantry, fish plate, and catch bucket</figcaption></figure>
+          <figure class="evidence-item"><img src="../assets/images/cf-overview-2.jpg" alt="The finished machine with its joystick controller and electronics box"><figcaption>The full setup with the joystick and electronics box</figcaption></figure>
           <figure class="evidence-item fit"><img src="../assets/images/carnival-fishing-cad.png" alt="SolidWorks render of the full carnival fishing assembly"><figcaption>The CAD model the build was based on</figcaption></figure>
           <figure class="evidence-item"><video controls preload="metadata" src="../assets/videos/carnival-fishing-demo.mp4"></video><figcaption>Demo: the fish plate turning beneath the gantry</figcaption></figure>
         </div>
