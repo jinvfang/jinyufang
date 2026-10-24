@@ -39,6 +39,7 @@
         <p>The gantry moves freely in X and Y, which gives two full degrees of freedom. The third axis, Z, only has two positions, up and down: one press of the joystick lowers the magnet, pauses, and lifts it back up. That limited vertical motion is the “half” degree of freedom. A fifth stepper motor spins the plate underneath to make the game harder, and everything runs from one handheld joystick and one control board.</p>
         <p>This page follows the project in order: <a class="inline-link" href="#brief">the brief</a>, <a class="inline-link" href="#how-it-plays">how it plays</a>, <a class="inline-link" href="#first-stage">the first linear stage</a>, <a class="inline-link" href="#cad">the CAD models</a>, <a class="inline-link" href="#parts">each part as built</a>, <a class="inline-link" href="#manufacturing">manufacturing</a>, <a class="inline-link" href="#code">electronics and code</a>, and <a class="inline-link" href="#final">the final assembly</a>.</p>
         <div class="outcomes"><h3>Key Work &amp; Outcomes</h3><ul>
+          <li>Demonstrated the working game to our professor, who played it with the joystick.</li>
           <li>Built a belt-driven gantry on 80/20 aluminum extrusion with X–Y travel of up to 50 mm/s and a 10 mm Z dip.</li>
           <li>Designed a purpose-built end effector: a printed holder that carries an electromagnet, plus 3D-printed fish with steel screws for it to grab.</li>
           <li>Drove five stepper motors (two for X, plus Y, Z, and the plate) and the electromagnet from one MKS Base board.</li>
@@ -234,7 +235,9 @@ float ramp(float current, float target, float dt) {
       <div><p class="eyebrow">Final assembly</p><h2>The Finished Machine</h2></div>
       <div class="case-copy">
         <p class="summary">The finished gantry stands on 80/20 legs over the fish plate, with the catch bucket beside it and the controls on a cable in front.</p>
+        <p>At our final demonstration on October 21, our professor took the joystick and played the game, steering the magnet over the spinning plate.</p>
         <div class="evidence-grid">
+          <figure class="evidence-item"><video controls muted playsinline preload="metadata" src="../assets/videos/carnival-fishing-final-demo.mp4"></video><figcaption>Final demonstration: our professor plays the game with the joystick</figcaption></figure>
           <figure class="evidence-item"><img src="../assets/images/cf-front.jpg" alt="Front view of the finished machine with the fish plate and catch bucket under the gantry"><figcaption>Front view: gantry, fish plate, and catch bucket</figcaption></figure>
           <figure class="evidence-item"><img src="../assets/images/cf-overview-2.jpg" alt="The finished machine with its joystick controller and electronics box"><figcaption>The full setup with the joystick and electronics box</figcaption></figure>
           <figure class="evidence-item fit"><img src="../assets/images/carnival-fishing-cad.png" alt="SolidWorks render of the full carnival fishing assembly"><figcaption>The CAD model the build was based on</figcaption></figure>
