@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SolidWorks Motion analysis of a steel four-bar mechanism: redundancy removal, midpoint velocity, motor torque, bearing forces, and the power needed at 600 rpm, by Jinyu Fang.">
+  <title>Four-Bar Mechanism Motion Analysis | Jinyu Fang</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="project-body">
+  <header class="site-header project-header">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="../index.html#home"><span>JF</span> Jinyu Fang</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links"><a href="../index.html#home">Home</a><a href="../index.html#about">About Me</a><a href="../index.html#resume">Resume</a><a href="../index.html#portfolio">Portfolio</a></div>
+    </nav>
+  </header>
+
+  <main class="project-main">
+    <!-- EDIT PROJECT HEADER -->
+    <header class="project-hero shell">
+      <a class="back-link" href="../index.html#portfolio">← All projects</a>
+      <p class="eyebrow">Design &amp; Fabrication</p>
+      <h1>Four-Bar Mechanism Motion Analysis</h1>
+      <div class="project-meta"><span>Mechanism Analyst</span><span>Electromechanical Design, Boston University</span><span>Oct 2026 — Nov 2026</span></div>
+    </header>
+
+    <!-- The first image is the large hero image. -->
+    <section class="project-gallery shell" aria-label="Project images">
+      <img src="../assets/images/fourbar-cad-assembly-front.png" alt="Front view of the four-bar mechanism in SolidWorks: Bearing on the left, Crank, Extension, Rocker, and NewBearing on the right">
+    </section>
+
+    <!-- EDIT PROJECT DESCRIPTION AND OUTCOMES -->
+    <section class="case-grid shell">
+      <div><p class="eyebrow">Project overview</p><h2>Simulating A Crank-Rocker Before Building It.</h2></div>
+      <div class="case-copy">
+        <p class="summary">I assembled a four-bar mechanism in SolidWorks, removed its redundant constraints so it had exactly one degree of freedom, and used SolidWorks Motion to find the torque, forces, and power a motor needs to drive it.</p>
+        <p>A crank, an extension (the coupler), and a rocker link two fixed bearings set 130 mm apart. A rotary motor turns the crank, and the extension and rocker follow. Once the links were made of plain carbon steel and gravity was switched on, the simulation shows how much the motor must push, and when it must hold back, to keep the crank at a constant speed.</p>
+        <p>This page follows the assignment: <a class="inline-link" href="#model">the model</a>, <a class="inline-link" href="#redundancy">removing redundancies</a>, <a class="inline-link" href="#velocity">the midpoint velocity</a>, and <a class="inline-link" href="#results">the determined values (a)–(e)</a>.</p>
+        <div class="outcomes"><h3>Key Work &amp; Outcomes</h3><ul>
+          <li>Reduced the mechanism from 9 redundant constraints to exactly 1 degree of freedom by choosing the right joint types.</li>
+          <li>Found a maximum motor torque of 0.641 N·m, at a crank angle of 324°, at 20 rpm.</li>
+          <li>Found maximum vertical bearing forces of 13.05 N (Bearing) and 9.91 N (NewBearing), which together average out to the links’ 17.4 N weight.</li>
+          <li>Showed the motor needs about 1.12 kW of peak power to hold the crank at a constant 600 rpm.</li>
+        </ul></div>
+      </div>
+    </section>
+
+    <section class="case-grid shell" id="model" aria-label="The model">
+      <div><p class="eyebrow">The model</p><h2>Four Links, Two Fixed Bearings</h2></div>
+      <div class="case-copy">
+        <p class="summary">Bearing and a copy of it, NewBearing, are fixed 130 mm apart. The crank, extension, and rocker connect them in a closed loop.</p>
+        <div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">Part</th><th scope="col">Role</th><th scope="col">Mass (plain carbon steel)</th></tr></thead><tbody>
+          <tr><td>Crank</td><td>Driven by the motor at Bearing; turns all the way around</td><td>0.392 kg</td></tr>
+          <tr><td>Extension</td><td>The coupler linking the crank to the rocker</td><td>0.754 kg</td></tr>
+          <tr><td>Rocker</td><td>Swings back and forth about NewBearing</td><td>0.629 kg</td></tr>
+          <tr><td>Bearing and NewBearing</td><td>Fixed supports for the crank and rocker</td><td>0.447 kg each</td></tr>
+        </tbody></table></div>
+        <div class="evidence-grid">
+          <figure class="evidence-item fit"><img src="../assets/images/fourbar-cad-assembly-iso.png" alt="Isometric view of the four-bar assembly"><figcaption>Assembly, isometric view: the links move in parallel planes</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/fourbar-cad-assembly-front.png" alt="Front view of the four-bar assembly"><figcaption>Assembly, front view</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/fourbar-cad-crank.png" alt="CAD render of the crank"><figcaption>Crank</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/fourbar-cad-extension.png" alt="CAD render of the extension"><figcaption>Extension (coupler)</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/fourbar-cad-rocker.png" alt="CAD render of the rocker"><figcaption>Rocker</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/fourbar-cad-bearing.png" alt="CAD render of the bearing"><figcaption>Bearing (NewBearing is an identical copy)</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-grid shell" id="redundancy" aria-label="Removing redundancies">
+      <div><p class="eyebrow">Removing redundancies</p><h2>Getting To Exactly One Degree Of Freedom</h2></div>
+      <div class="case-copy">
+        <p class="summary">With a hinge at every joint, the motion solver found 9 redundant constraints, so I changed two joints instead of letting the solver remove constraints on its own.</p>
+        <p>Three moving links in 3D have 18 degrees of freedom. Four hinges remove 5 each, 20 in total, so the loop is over-constrained on paper and only moves because the parts line up perfectly. Changing the joint between the extension and the rocker to a concentric mate (it may also slide along its axis) and the joint between the rocker and NewBearing to a point-to-point spherical joint leaves exactly one degree of freedom, driven by the crank motor:</p>
+        <div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">Joint</th><th scope="col">Type</th><th scope="col">Constraints removed</th></tr></thead><tbody>
+          <tr><td>Bearing – Crank</td><td>Hinge (revolute)</td><td>5</td></tr>
+          <tr><td>Crank – Extension</td><td>Hinge (revolute)</td><td>5</td></tr>
+          <tr><td>Extension – Rocker</td><td>Concentric (cylindrical)</td><td>4</td></tr>
+          <tr><td>Rocker – NewBearing</td><td>Spherical (point coincident)</td><td>3</td></tr>
+          <tr><td>Total</td><td></td><td>17 of 18, leaving 1 DOF</td></tr>
+        </tbody></table></div>
+        <div class="evidence-grid">
+          <figure class="evidence-item fit"><img src="../assets/images/fourbar-trace-path.png" alt="Closed loop traced by a point on the Extension"><figcaption>Trace path of a point on the Extension: the closed loop it follows each crank turn</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-grid shell" id="velocity" aria-label="Midpoint velocity">
+      <div><p class="eyebrow">Assignment 1–2</p><h2>Velocity Of The Extension Midpoint</h2></div>
+      <div class="case-copy">
+        <p class="summary">With the crank at 20 rpm (one turn every 3 s), the midpoint of the extension reaches 0.100 m/s in X and ±0.147 m/s in Y.</p>
+        <p>I plotted the X and Y velocity of the midpoint over two crank turns and exported them to CSV. The motion repeats every turn: Y ranges from −0.146 to +0.147 m/s and X from −0.082 to +0.100 m/s.</p>
+        <div class="evidence-grid">
+          <figure class="evidence-item fit"><img src="../assets/images/fourbar-velocity.png" alt="Line chart of X and Y velocity of the Extension midpoint over one crank turn"><figcaption>X and Y velocity of the Extension midpoint over one crank turn</figcaption></figure>
+        </div>
+        <p><a class="inline-link" href="../assets/data/four-bar/extension-midpoint-velocity.csv" download>Download the velocity data (CSV)</a></p>
+      </div>
+    </section>
+
+    <section class="case-grid shell" id="results" aria-label="Determined values">
+      <div><p class="eyebrow">Assignment 3–4</p><h2>Steel Links, Gravity, And The Determined Values</h2></div>
+      <div class="case-copy">
+        <p class="summary">With every part changed to plain carbon steel and gravity added, I plotted the motor torque, the bearing reactions, and the motor power.</p>
+        <p>Crank angles are measured from the crank’s starting position (horizontal, between the two bearings) in the motor’s direction of rotation.</p>
+        <div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">Determine</th><th scope="col">Result</th></tr></thead><tbody>
+          <tr><td>(a) Maximum motor torque</td><td>0.641 N·m. The largest torque in the opposite direction is −0.720 N·m.</td></tr>
+          <tr><td>(b) Crank angle at maximum torque</td><td>324° in every cycle (−0.720 N·m occurs at 156°)</td></tr>
+          <tr><td>(c) Maximum vertical force on the bearings</td><td>Bearing: 13.05 N at 276°. NewBearing: 9.91 N at 24°.</td></tr>
+          <tr><td>(d) Minimum motor power for a constant 600 rpm</td><td>About 1.12 kW (1,120 W peak, at 0°)</td></tr>
+          <tr><td>(e) Meaning of negative torque</td><td>The motor is braking the links rather than driving them (explained below)</td></tr>
+        </tbody></table></div>
+        <h3>(a) and (b): Motor torque</h3>
+        <p>At 20 rpm the motor torque peaks at 0.641 N·m when the crank is at 324°, near the end of each turn, while the motor lifts the extension and rocker. The torque is positive from 246° through 360° to 78°, and negative from 78° to 246°.</p>
+        <div class="evidence-grid">
+          <figure class="evidence-item fit"><img src="../assets/images/fourbar-torque.png" alt="Line chart of motor torque against crank angle, with the negative region shaded"><figcaption>Motor torque over one crank turn, with gravity, at 20 rpm</figcaption></figure>
+        </div>
+        <h3>(c): Vertical force on the bearings</h3>
+        <p>Bearing carries up to 13.05 N (at 276°) and NewBearing up to 9.91 N (at 24°). The two share the load as the links move: when one carries more, the other carries less. Averaged over a turn, they add up to 17.41 N, exactly the weight of the three moving steel links (1.775 kg), which confirms these are the vertical components.</p>
+        <div class="evidence-grid">
+          <figure class="evidence-item fit"><img src="../assets/images/fourbar-reactions.png" alt="Line chart of vertical reaction force on Bearing and NewBearing against crank angle"><figcaption>Vertical reaction force on each bearing over one crank turn</figcaption></figure>
+        </div>
+        <h3>(d): Power at 600 rpm</h3>
+        <p>At 600 rpm (one turn every 0.1 s) the links’ inertia dominates, and the power swings from +1,120 W to −615 W every turn. A motor holding the crank at a constant 600 rpm must deliver the peak, so it needs at least about 1.12 kW, equivalent to 17.8 N·m of torque at 62.8 rad/s. For comparison, at 20 rpm the peak power is only 1.34 W.</p>
+        <div class="evidence-grid">
+          <figure class="evidence-item fit"><img src="../assets/images/fourbar-power-600rpm.png" alt="Line chart of motor power over one crank turn at 600 rpm, peaking at 1120 W"><figcaption>Motor power over one crank turn at a constant 600 rpm</figcaption></figure>
+        </div>
+        <h3>(e): What negative torque means</h3>
+        <p>Positive torque means the motor is pushing the crank in its direction of rotation, doing work to lift and accelerate the links. Negative torque means the links are trying to run ahead of the motor: between 78° and 246° the extension and rocker are coming down, so gravity (and, at high speed, the links’ momentum) would speed the crank up. To keep the speed constant, the motor pushes back and acts as a brake, absorbing energy instead of supplying it, which is why the power is negative over the same range.</p>
+        <p>Because the simulation has no friction, the two balance out: over one turn the motor puts in 1.25 J lifting the links and takes the same 1.25 J back as they fall, so the net work per turn is zero.</p>
+        <p>Download the data: <a class="inline-link" href="../assets/data/four-bar/motor-torque-20rpm.csv" download>motor torque</a>, <a class="inline-link" href="../assets/data/four-bar/bearing-vertical-force.csv" download>Bearing force</a>, <a class="inline-link" href="../assets/data/four-bar/newbearing-vertical-force.csv" download>NewBearing force</a>, <a class="inline-link" href="../assets/data/four-bar/motor-power-600rpm.csv" download>power at 600 rpm</a> (CSV).</p>
+      </div>
+    </section>
+
+    <section class="project-end shell"><div><p>Continue exploring</p><h2>See The Complete Project Collection.</h2></div><a class="button" href="../index.html#portfolio">Back to portfolio <span aria-hidden="true">↗</span></a></section>
+  </main>
+
+  <footer><div class="shell"><p>© 2026 Jinyu Fang</p><div><a href="mailto:jinyuf@bu.edu">Email</a><a href="https://linkedin.com/in/jinyu-fang" target="_blank" rel="noreferrer">LinkedIn</a></div></div></footer>
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
