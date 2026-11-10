@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Class exercise for Electromechanical Design: a four-bar linkage that moves a door on a standard 20 ft ISO shipping container from its end opening to its roof, dimensioned in Math Illustrations and modeled and animated in SolidWorks by Jinyu Fang.">
+  <title>Shipping Container Door Mechanism | Jinyu Fang</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="project-body">
+  <header class="site-header project-header">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="../index.html#home"><span>JF</span> Jinyu Fang</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links"><a href="../index.html#home">Home</a><a href="../index.html#about">About Me</a><a href="../index.html#resume">Resume</a><a href="../index.html#portfolio">Portfolio</a></div>
+    </nav>
+  </header>
+
+  <main class="project-main">
+    <!-- EDIT PROJECT HEADER -->
+    <header class="project-hero shell">
+      <a class="back-link" href="../index.html#portfolio">← All projects</a>
+      <p class="eyebrow">Class Exercise · Electromechanical Design</p>
+      <h1>Shipping Container Door Mechanism</h1>
+      <div class="project-meta"><span>Class exercise</span><span>Electromechanical Design, Boston University</span><span>Nov 2026</span></div>
+    </header>
+
+    <!-- The first image is the large hero image. -->
+    <section class="project-gallery shell" aria-label="Project images">
+      <img src="../assets/images/container-cad-assembly-front.png" alt="Side view of the shipping container with the door closed across its end opening, held by two rods pinned to the container's side wall">
+    </section>
+
+    <!-- EDIT PROJECT DESCRIPTION AND OUTCOMES -->
+    <section class="case-grid shell">
+      <div><p class="eyebrow">Project overview</p><h2>Moving A Door From The End To The Roof.</h2></div>
+      <div class="case-copy">
+        <p class="summary">In a class exercise, I designed a door for a standard ISO shipping container and a four-bar linkage that swings it from the end opening up onto the roof without passing through the container.</p>
+        <p>I researched the standard container dimensions and used Math Illustrations to work out the mechanism’s dimensions. I then modeled the container, door, and links in SolidWorks, assembled them, and animated the door moving between its two positions.</p>
+        <div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">Step</th><th scope="col">Tool</th></tr></thead><tbody>
+          <tr><td>Container and mechanism dimensions</td><td>Math Illustrations</td></tr>
+          <tr><td>Part models and assembly</td><td>SolidWorks</td></tr>
+          <tr><td>Motion animation</td><td>SolidWorks</td></tr>
+        </tbody></table></div>
+        <div class="outcomes"><h3>Key Work &amp; Outcomes</h3><ul>
+          <li>Modeled a standard 20 ft ISO container at its real size: 6,096 × 2,438.4 × 2,590.8 mm (20 × 8 × 8.5 ft).</li>
+          <li>Designed a full-size door to close the 2,438.4 × 2,590.8 mm end opening.</li>
+          <li>Linked the door to the container with two rods, making a four-bar linkage with one degree of freedom.</li>
+          <li>Animated the door moving from the end of the container to its roof without passing through the body.</li>
+        </ul></div>
+      </div>
+    </section>
+
+    <section class="case-grid shell" aria-label="The brief">
+      <div><p class="eyebrow">The brief</p><h2>Two Positions, One Rule</h2></div>
+      <div class="case-copy">
+        <p class="summary">The door has to move between two positions: standing across the end of the container, and lying flat on top of it.</p>
+        <div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">Requirement</th><th scope="col">How the design meets it</th></tr></thead><tbody>
+          <tr><td>Use the dimensions of a standard ISO shipping container</td><td>The container is modeled at the standard 20 ft size</td></tr>
+          <tr><td>Design a door for the end of the container</td><td>A door sized to the full 8 × 8.5 ft end opening</td></tr>
+          <tr><td>Move the door between the closed and roof positions</td><td>Two rods pinned to the container’s side wall carry the door between the two positions</td></tr>
+          <tr><td>Never pass through the body of the container</td><td>The door swings up and over the top front edge, staying outside the container the whole way</td></tr>
+        </tbody></table></div>
+      </div>
+    </section>
+
+    <section class="case-grid shell" aria-label="The mechanism">
+      <div><p class="eyebrow">The mechanism</p><h2>A Four-Bar Linkage</h2></div>
+      <div class="case-copy">
+        <p class="summary">The container is the fixed link, the two rods are the cranks, and the door is the coupler between them.</p>
+        <p>Each rod is pinned to the container’s side wall at one end and to the door at the other. Because the two rods pivot from different points on the container, the door does not just rotate about a single hinge: it lifts, tips back over the front edge of the roof, and settles flat on top. Working out the rod lengths and pivot locations so that the door reaches both positions without hitting the container was the core of the exercise.</p>
+        <div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">Link</th><th scope="col">Part</th><th scope="col">Role</th></tr></thead><tbody>
+          <tr><td>Ground</td><td>Shipping container</td><td>Holds the two fixed pivots on its side wall</td></tr>
+          <tr><td>Crank 1</td><td>“a” rod</td><td>Pivots from the container and supports the door</td></tr>
+          <tr><td>Crank 2</td><td>“b” rod</td><td>Pivots from the container and supports the door</td></tr>
+          <tr><td>Coupler</td><td>Door</td><td>Carried between the two rods from the end to the roof</td></tr>
+        </tbody></table></div>
+      </div>
+    </section>
+
+    <section class="case-grid shell" aria-label="CAD models">
+      <div><p class="eyebrow">CAD models</p><h2>Modeled In SolidWorks</h2></div>
+      <div class="case-copy">
+        <p class="summary">Every part is modeled at full scale in steel, then assembled with mates at each pivot.</p>
+        <div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">Part</th><th scope="col">Key dimensions</th></tr></thead><tbody>
+          <tr><td>Shipping container</td><td>6,096 × 2,438.4 × 2,590.8 mm (20 × 8 × 8.5 ft), hollow with a 2.54 mm (0.1 in) wall, two pivot holes on the side</td></tr>
+          <tr><td>Door</td><td>2,438.4 × 2,590.8 mm to cover the end opening, with a pin tube along each edge for the rods</td></tr>
+          <tr><td>“a” and “b” rods</td><td>63.5 mm (2.5 in) thick links with a pin hole at each end</td></tr>
+        </tbody></table></div>
+        <div class="evidence-grid">
+          <figure class="evidence-item fit"><img src="../assets/images/container-cad-assembly-iso.png" alt="Isometric view of the container with the door closed and the two rods on the side"><figcaption>Assembly with the door closed across the end</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/container-cad-assembly-front.png" alt="Side view of the container assembly"><figcaption>Side view: the two rods pinned to the container’s side wall</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/container-cad-container.png" alt="CAD model of the shipping container with two pivot holes"><figcaption>Shipping container, with the two pivot holes</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/container-cad-door.png" alt="CAD model of the door with pin tubes along two edges"><figcaption>Door, with a pin tube along each edge</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/container-cad-a-rod.png" alt="CAD model of the a rod"><figcaption>“a” rod</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/container-cad-b-rod.png" alt="CAD model of the b rod"><figcaption>“b” rod</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-grid shell" aria-label="Animation">
+      <div><p class="eyebrow">Animation</p><h2>The Door In Motion</h2></div>
+      <div class="case-copy">
+        <p class="summary">The SolidWorks animation shows the door lifting off the end of the container, passing over the top front edge, and coming to rest flat on the roof.</p>
+        <div class="evidence-grid">
+          <figure class="evidence-item"><video controls muted playsinline preload="metadata" src="../assets/videos/shipping-container-door.mp4"></video><figcaption>SolidWorks animation: the door moving from the end of the container to the roof</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-end shell"><div><p>Continue exploring</p><h2>See The Complete Project Collection.</h2></div><a class="button" href="../index.html#portfolio">Back to portfolio <span aria-hidden="true">↗</span></a></section>
+  </main>
+
+  <footer><div class="shell"><p>© 2026 Jinyu Fang</p><div><a href="mailto:jinyuf@bu.edu">Email</a><a href="https://linkedin.com/in/jinyu-fang" target="_blank" rel="noreferrer">LinkedIn</a></div></div></footer>
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
