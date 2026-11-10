@@ -45,6 +45,7 @@
         <div class="outcomes"><h3>Key Work &amp; Outcomes</h3><ul>
           <li>Modeled a standard 20 ft ISO container at its real size: 6,096 × 2,438.4 × 2,590.8 mm (20 × 8 × 8.5 ft).</li>
           <li>Designed a full-size door to close the 2,438.4 × 2,590.8 mm end opening.</li>
+          <li>Sized the linkage in Math Illustrations: rod a 9.38 ft and rod b 5.98 ft, pinned to the container’s side wall.</li>
           <li>Linked the door to the container with two rods, making a four-bar linkage with one degree of freedom.</li>
           <li>Animated the door moving from the end of the container to its roof without passing through the body.</li>
         </ul></div>
@@ -75,6 +76,25 @@
           <tr><td>Crank 2</td><td>“b” rod</td><td>Pivots from the container and supports the door</td></tr>
           <tr><td>Coupler</td><td>Door</td><td>Carried between the two rods from the end to the roof</td></tr>
         </tbody></table></div>
+      </div>
+    </section>
+
+    <section class="case-grid shell" aria-label="Dimensions in Math Illustrations">
+      <div><p class="eyebrow">Dimensions</p><h2>Sizing The Linkage In Math Illustrations</h2></div>
+      <div class="case-copy">
+        <p class="summary">Before modeling anything, I sketched the container’s side profile in Math Illustrations and sized the two rods and their pivot points.</p>
+        <p>The sketch shows the 8.5 ft door in three positions: closed across the end of the container (AB), partway up (A′B′), and flat on the roof (A″B″). Rod <em>a</em> runs from pivot OA to the top of the door at A, and rod <em>b</em> runs from pivot OB to the bottom of the door at B. Pivot positions are measured in feet from the bottom corner of the door opening, B at (0, 0).</p>
+        <div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">Variable</th><th scope="col">Meaning</th><th scope="col">Value</th></tr></thead><tbody>
+          <tr><td>a</td><td>Length of rod a (OA to A)</td><td>9.376 ft (2.858 m)</td></tr>
+          <tr><td>b</td><td>Length of rod b (OB to B)</td><td>5.984 ft (1.824 m)</td></tr>
+          <tr><td>(x<sub>0</sub>, y<sub>0</sub>)</td><td>Pivot OA on the container’s side wall</td><td>(8.723, 3.977) ft</td></tr>
+          <tr><td>(x<sub>1</sub>, y<sub>1</sub>)</td><td>Pivot OB on the container’s side wall</td><td>(3.489, 5.287) ft</td></tr>
+          <tr><td>AB, A′B′, A″B″</td><td>Door length in each position</td><td>8.5 ft (the container’s height)</td></tr>
+        </tbody></table></div>
+        <div class="evidence-grid">
+          <figure class="evidence-item fit"><img src="../assets/images/container-math-illustrations-sketch.png" alt="Math Illustrations sketch of the container side profile with the door in its closed, partway, and roof positions and the two rods a and b"><figcaption>Math Illustrations sketch: the door closed (AB), partway up (A′B′), and on the roof (A″B″), with rods a and b</figcaption></figure>
+          <figure class="evidence-item fit"><img src="../assets/images/container-math-illustrations-variables.png" alt="Math Illustrations variables panel listing a, b, x0, x1, y0, and y1"><figcaption>The linkage variables from the sketch</figcaption></figure>
+        </div>
       </div>
     </section>
 
